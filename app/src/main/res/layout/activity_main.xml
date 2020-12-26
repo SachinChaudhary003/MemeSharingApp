@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <ImageView
+        android:id="@+id/MemeImageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        tools:srcCompat="@tools:sample/avatars"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/black"
+        />
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/MemeImageView"
+        app:layout_constraintRight_toRightOf="@id/MemeImageView"
+        app:layout_constraintTop_toTopOf="@id/MemeImageView"
+        app:layout_constraintBottom_toBottomOf="@id/MemeImageView"
+        android:id="@+id/Progressbar" />
+
+
+        />
+
+    <Button
+        android:id="@+id/ShareButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/sharebuttoncolor"
+        android:onClick="ShareMeme"
+        android:padding="20dp"
+        android:text="@string/share"
+        android:textColor="@color/white"
+        app:backgroundTint="@color/sharebuttoncolor"
+        app:layout_constraintBottom_toBottomOf="@+id/MemeImageView"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="@id/guideline2" />
+
+    <Button
+        android:id="@+id/NextButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/nextbuttoncolor"
+        android:onClick="NextMeme"
+        android:padding="20dp"
+        android:text="@string/next"
+        android:textColor="@color/white"
+        app:backgroundTint="@color/nextbuttoncolor"
+        app:layout_constraintBottom_toBottomOf="@+id/MemeImageView"
+        app:layout_constraintLeft_toLeftOf="@id/guideline2"
+        app:layout_constraintRight_toRightOf="parent" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5"/>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
